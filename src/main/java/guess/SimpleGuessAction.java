@@ -1,4 +1,4 @@
-package oogame.impl;
+package guess;
 
 /**
  * <p> {@link GuessAction} implementation.
@@ -29,12 +29,12 @@ public final class SimpleGuessAction implements GuessAction {
 	@Override
 	public GuessAction evaluate() {
 		try {
-			Integer.parseInt(value);
+			return new ValidGuessAction(this, new Integer(value)); 
 		} catch (Exception e) {
 			return new InvalidGuessAction(this);
 		}
 
-		return this;
+		
 	}
 
 	@Override
@@ -49,8 +49,15 @@ public final class SimpleGuessAction implements GuessAction {
 
 
 	@Override
-	public String value() {
+	public Integer value() {
+		//and now?
 		return this.value;
+	}
+
+	@Override
+	public GuessMatch perform() {
+		//cant' perform return same match
+		return this.match;
 	}
 
 }

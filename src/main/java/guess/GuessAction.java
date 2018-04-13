@@ -1,6 +1,6 @@
-package oogame.impl;
+package guess;
 
-import oogame.Action;
+import oogames.action.Action;
 
 /**
  * <p> {@link Action} implementation for a guess game. Just declares overriding methods, narrowing
@@ -10,9 +10,15 @@ import oogame.Action;
  *
  */
 public interface GuessAction extends Action {
+	
+	@Override
+	public abstract GuessMatch perform();
 
 	@Override
-	public abstract GuessAction evaluate();
+	public abstract GuessMatch match();
 	
-	public abstract String value();
+	@Override
+	public abstract GuessAction evaluate();
+
+	public abstract Integer value();
 }

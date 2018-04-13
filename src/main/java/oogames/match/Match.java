@@ -1,6 +1,10 @@
-package oogame;
+package oogames.match;
 
 
+
+import oogames.player.MatchPlayer;
+import oogames.player.Player;
+import oogames.result.Result;
 
 /**
  * <p>

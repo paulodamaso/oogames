@@ -1,10 +1,10 @@
-package oogame.impl;
+package guess;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
-import oogame.Match;
-import oogame.Player;
+import oogames.match.Match;
+import oogames.player.Player;
 
 
 public final class GuessMatch implements Match {
@@ -46,20 +46,13 @@ public final class GuessMatch implements Match {
 	@Override
 	public GuessResult play() {
 
-		/*
-		 * @todo #11 avoid fluent interfacing in match.play()
-		 */
 		System.out.println("Guess my number: ");
 		return 
-
-				new GuessMatch(
-						this, 
-							new EvaluatedAction(
-								new GuessPlayer(
-										players.next(),
-										this
-										).act().evaluate()
-								).perform()
-							).result();
+						new GuessPlayer(
+								players.next(),
+								this
+								).act().evaluate()
+						.perform()
+					.result();
 	}
 }

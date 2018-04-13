@@ -1,6 +1,4 @@
-package oogame;
-
-import game.match.Match;
+package oogames.player;
 
 /**
  * <p> Set of players which are playing a {@link Match}.

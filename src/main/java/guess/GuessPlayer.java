@@ -1,10 +1,9 @@
-package oogame.impl;
+package guess;
 
 import java.util.Scanner;
 
-import oogame.Action;
-import oogame.MatchPlayer;
-import oogame.Player;
+import oogames.player.MatchPlayer;
+import oogames.player.Player;
 
 /**
  * <p> A simple implementation of a guess game player. The player {@link Action} is just to provide

@@ -1,8 +1,7 @@
-package oogame;
 import java.util.Scanner;
 
-import oogame.impl.GuessMatch;
-import oogame.impl.SimplePlayer;
+import guess.GuessMatch;
+import guess.SimplePlayer;
 
 /**
  * <p> Main class for games.

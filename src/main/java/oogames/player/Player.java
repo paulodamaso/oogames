@@ -1,4 +1,4 @@
-package oogame;
+package oogames.player;
 
 /**
  * <p> The higher abstraction of a player in a gaming context.

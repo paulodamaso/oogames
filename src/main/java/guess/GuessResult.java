@@ -1,7 +1,6 @@
-package oogame.impl;
+package guess;
 
-
-import oogame.Result;
+import oogames.result.Result;
 
 /**
  * <p> A result implemented for a guess game.

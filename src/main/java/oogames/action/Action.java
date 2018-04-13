@@ -1,6 +1,8 @@
-package oogame;
+package oogames.action;
 
 
+import oogames.match.Match;
+import oogames.player.Player;
 
 /**
  * <p>
@@ -27,6 +29,15 @@ package oogame;
  *
  */
 public interface Action {
+	
+	/**
+	 * <p>
+	 * Perform the action to a match an return the new {@link Match} with the action
+	 * results.
+	 * 
+	 * @return {@link Match} representing the match state after the action.
+	 */
+	public abstract Match perform();
 
 	/**
 	 * <p> Evaluate the action according to game rules, returning a new action with the	result 

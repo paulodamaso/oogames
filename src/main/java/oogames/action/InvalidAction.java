@@ -1,6 +1,4 @@
-package oogame;
-
-import game.match.Match;
+package oogames.action;
 
 /**
  * <p>
@@ -29,5 +27,7 @@ import game.match.Match;
 public interface InvalidAction extends Action {
 
 	@Override
-	public abstract InvalidAction evaluate();
+	public default InvalidAction evaluate() {
+		return this;
+	}
 }

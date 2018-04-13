@@ -1,9 +1,9 @@
-package oogame.impl;
+package guess;
 
 import java.util.ArrayList;
 
-import oogame.Player;
-import oogame.Players;
+import oogames.player.Player;
+import oogames.player.Players;
 
 
 public final class GuessPlayers implements Players {
