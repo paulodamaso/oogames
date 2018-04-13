@@ -1,5 +1,6 @@
-package guess;
+package guess.action;
 
+import guess.match.GuessMatch;
 import oogames.action.Action;
 
 /**
@@ -11,8 +12,8 @@ import oogames.action.Action;
  */
 public interface GuessAction extends Action {
 	
-	@Override
-	public abstract GuessMatch perform();
+  @Override
+  public abstract GuessMatch perform();
 
 	@Override
 	public abstract GuessMatch match();

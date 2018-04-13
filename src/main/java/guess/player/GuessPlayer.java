@@ -1,13 +1,16 @@
-package guess;
+package guess.player;
 
 import java.util.Scanner;
 
+import guess.action.BaseGuessAction;
+import guess.action.GuessAction;
+import guess.match.GuessMatch;
 import oogames.player.MatchPlayer;
 import oogames.player.Player;
 
 /**
  * <p> A simple implementation of a guess game player. The player {@link Action} is just to provide
- * a integer number.
+ * a input from the command line representing a number.
  * 
  * @author paulodamaso
  *
@@ -27,12 +30,9 @@ public final class GuessPlayer implements MatchPlayer {
 		return this.origin.name();
 	}
 
+	@Override
 	public GuessAction act() {
-		return new SimpleGuessAction(this, new Scanner(System.in).nextLine());
-	}
-
-	public Player origin() {
-		return this.origin;
+		return new BaseGuessAction(this.match, new Scanner(System.in).nextLine());
 	}
 
 	@Override

@@ -1,5 +1,6 @@
 package oogames.result;
 
+import oogames.match.Match;
 
 /**
  * <p> Abstraction of a {@link Match} result.

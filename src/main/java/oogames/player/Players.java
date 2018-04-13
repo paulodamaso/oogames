@@ -1,5 +1,7 @@
 package oogames.player;
 
+import oogames.match.Match;
+
 /**
  * <p> Set of players which are playing a {@link Match}.
  * 
@@ -13,7 +15,6 @@ package oogames.player;
  * 
  * @author paulodamaso
  *
- * @param <P> an implementation of {@link Player}.
  */
 public interface Players {
 

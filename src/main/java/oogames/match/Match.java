@@ -38,5 +38,5 @@ public interface Match {
 	 */
 	public Result result();
 
-	public Result play();
+	public Match play();
 }

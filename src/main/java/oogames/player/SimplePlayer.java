@@ -1,6 +1,4 @@
-package guess;
-
-import oogames.player.Player;
+package oogames.player;
 
 /**
  * <p> Simplest implementation of a {@link Player}.

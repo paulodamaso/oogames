@@ -1,5 +1,7 @@
 package oogames.action;
 
+import oogames.match.Match;
+
 /**
  * <p>
  * An {@link Action} that is not valid. Invalid actions are created in

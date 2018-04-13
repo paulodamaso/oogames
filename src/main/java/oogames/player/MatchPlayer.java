@@ -1,5 +1,6 @@
 package oogames.player;
 
+import oogames.action.Action;
 import oogames.match.Match;
 
 /**
@@ -19,15 +20,15 @@ import oogames.match.Match;
 * {@link Action} for that {@link Match} in particular.
 * */
 public interface MatchPlayer extends Player {
-
-//	/**
-//	 * <p>
-//	 * An {@link Action} to be performed, created by this player.
-//	 * 
-//	 * @return {@link Action} made by this player
-//	 */
-//	public Action act();
-
+	
+	/**
+	 * <p>
+	 * An {@link Action} to be performed, created by this player.
+	 * 
+	 * @return {@link Action} made by this player
+	 */
+	public Action act();
+	
 	/**
 	 * <p>
 	 * The {@link Match} this player is currently playing.

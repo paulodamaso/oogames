@@ -5,18 +5,18 @@ import oogames.match.Match;
 import oogames.player.Player;
 
 /**
- * <p>
  * An action of a {@link Player} in a {@link Match}.
- * 
- * <p> The {@link #evaluate()} method evaluates the action to guarantee that it conforms to the 
+ * The {@link #evaluate()} method evaluates the action to guarantee that it conforms to the 
  * rules of the game this match represents. If the action is accounted as invalid, for disobeying 
  * some game rule for example, the {@link #evaluate()} method must return an {@link InvalidAction} 
- * and {@link Action} implementation representing this fact.
+ * and {@link Action} implementation representing this fact. If the action comply with {@link Match}
+ * rules, the object returned in {@link #evaluate()} must be a implementation of {@link ValidAction}
+ * interface. 
  * 
  * <p> Every action is related to a {@link Match}, which is the match where the action belongs. It 
  * means that some particular action is made to a {@link Match}, where its state will be applied, 
  * altering that {@link Match} state to a new one. The {@link #perform()} method is the assimilation
- *  of this action by the match that it belongs; by performing, an action applies itself
+ * of this action by the match that it belongs; by performing, an action applies itself
  * to a {@link Match}, generating a {@link Match} with this new state.
  * 
  * <p>
@@ -42,21 +42,22 @@ public interface Action {
 	/**
 	 * <p> Evaluate the action according to game rules, returning a new action with the	result 
 	 * of the evaluation. If the action is not valid, return something that implements both 
-	 * {@link InvalidAction} and {@link Action}.
+	 * {@link InvalidAction} and {@link Action}; if its is valid, returns something that implements
+	 * {@link ValidAction} and {@link Action}.
 	 * 
 	 * @return the evaluated action, or an {@link InvalidAction} if this action is
 	 *         invalid.
 	 */
 	public abstract Action evaluate();
 
-	/**
-	 * <p>
-	 * The player which made this action.
-	 * 
-	 * @return {@link Player} which made this action.
-	 */
-	public abstract Player player();
-
+//	/**
+//	 * <p>
+//	 * The player which made this action.
+//	 * 
+//	 * @return {@link Player} which made this action.
+//	 */
+//	public abstract Player player();
+//
 	/**
 	 * <p>
 	 * The {@link Match} which this actions belongs to.

@@ -1,4 +1,4 @@
-package guess;
+package guess.result;
 
 import oogames.result.Result;
 
@@ -13,21 +13,22 @@ import oogames.result.Result;
  */
 public final class GuessResult implements Result {
 
-	private final String result;
-	private final Integer chosen;
-	private final Integer guess;
+	private final String matchResult;
+	private final Integer chosenNumber;
+	private final Integer playerGuess;
 
 	public GuessResult(String result, Integer chosen, Integer guess) {
-		this.result = result;
-		this.chosen = chosen;
-		this.guess = guess;
+		this.matchResult = result;
+		this.chosenNumber = chosen;
+		this.playerGuess = guess;
 	}
 
-	public String result() {
+	@Override
+  public String result() {
 		return " \nGuess game result: \n" +
-				this.result + "\n" +
-				"Number Chosen by match: " + this.chosen.intValue() + "\n"+
-				"Number Chosen by player" + this.guess.intValue() ;
+				this.matchResult + "\n" +
+				"Number Chosen by match: " + this.chosenNumber.intValue() + "\n"+
+				"Number Chosen by player" + this.playerGuess.intValue() ;
 	}
 	
 }
